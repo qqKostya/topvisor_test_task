@@ -1,13 +1,18 @@
 <?php
 
-class Tree {
+namespace Classes;
+
+class Tree
+{
     public array $apples = [];
 
-    public function addApple(Apple $apple = null): void {
+    public function addApple(Apple $apple = null): void
+    {
         $this->apples[] = $apple ?? new Apple();
     }
 
-    public function passDay(): void {
+    public function passDay(): void
+    {
         foreach ($this->apples as $apple) {
             $apple->age++;
             if ($apple->age >= 30) {
@@ -19,7 +24,8 @@ class Tree {
         }
     }
 
-    public function getApplesCount(): int {
+    public function getApplesCount(): int
+    {
         return count($this->apples);
     }
 }
